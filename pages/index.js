@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Index from '../components/Index';
-import New from '../components/New';
+import Landing from '../components/Landing';
+import Upload from '../components/Upload';
 
 export default function Home() {
-  const [activePage, setActivePage] = useState('index');
+  const [activePage, setActivePage] = useState('landing');
 
   const navigateToPage = (page) => {
     setActivePage(page);
@@ -11,8 +11,8 @@ export default function Home() {
 
   return (
     <>
-      {activePage === 'index' && <Index navigateToPage={navigateToPage} />}
-      {activePage === 'new' && <New navigateToPage={navigateToPage} />}
+      {activePage === 'landing' && <Landing navigateToPage={navigateToPage} />}
+      {activePage === 'upload' && <Upload navigateToPage={navigateToPage} />}
     </>
   );
 }
